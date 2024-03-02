@@ -32,7 +32,21 @@
                 {
                   # https://devenv.sh/reference/options/
                   packages = [
-                   
+                   pkgs.stdenv.cc 
+                   pkgs.gnumake
+                   pkgs.python311Packages.numpy 
+                   pkgs.python311Packages.pandas 
+                   pkgs.python311Packages.seaborn 
+                   pkgs.python311Packages.networkx 
+                   pkgs.python311Packages.pillow
+                   pkgs.python311Packages.pyparsing
+                   pkgs.python311Packages.packaging
+                   pkgs.python311Packages.kiwisolver
+                   pkgs.python311Packages.fonttools
+                   pkgs.python311Packages.cycler
+                   pkgs.python311Packages.contourpy
+                   pkgs.python311Packages.matplotlib
+                   pkgs.python311Packages.tqdm
                   ]; # XXX pkgs?
 
                   languages.python = {
@@ -44,7 +58,7 @@
                     };
                   };
 
-                  enterShell = ''pip install matplotlib numpy pandas networkx mesa==1.2.1'';
+                  enterShell = ''pip install mesa==1.2.1'';
 
                   #processes.myapp.exec = "";
                 }
