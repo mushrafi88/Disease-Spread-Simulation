@@ -8,7 +8,7 @@ This repository features a simulation framework for modeling disease spread util
 - **Visualization Tools**: Generate line graphs and heatmaps to visualize simulation results.
 - **Customizable Parameters**: Tailor simulation inputs through a dedicated JSON file.
 
-![Alt text for the GIF](results/eta_update.mp4)
+![Alt text for the GIF](results/output.gif)
 
 
 
