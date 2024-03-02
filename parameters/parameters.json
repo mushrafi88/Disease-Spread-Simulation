@@ -38,7 +38,7 @@
   "min_vaccine_coverage": 0.005,
   "max_vaccine_coverage": 0.05,
   "eta_update": true,
-  "local_eta_update": false,
+  "local_eta_update": true,
   "nash_table": true,
   "nash_table_epoch": 100,
   "neighborhood_radius_l": 1,

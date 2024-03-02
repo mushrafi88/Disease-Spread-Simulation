@@ -54,9 +54,10 @@ def generate_heatmaps(base_params, epochs=75, output_dir='results/heatmap_data',
         
         results_df = pd.DataFrame(results)
         results_df.to_csv(f'{output_dir}/heatmap_alpha_{alpha}.csv', index=False)
-        generate_heatmap_for_folder()
-
+    
 if __name__ == "__main__":
     base_params = load_parameters('parameters/parameters.json')
     generate_heatmaps(base_params, epochs=40, interval=10)
+    generate_heatmap_for_folder()
+
 
