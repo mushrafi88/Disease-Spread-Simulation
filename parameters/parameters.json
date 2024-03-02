@@ -1,7 +1,7 @@
 {
-  "N": 10000,
-  "width": 120,
-  "height": 120,
+  "N": 3000,
+  "width": 67,
+  "height": 67,
   "initial_infection": 0.005,
   "initial_immunity": 0.01,
   "transmissibility_strain_1": 0.33,
