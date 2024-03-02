@@ -8,6 +8,8 @@ __pycache__/
 **/.mamba/
 **/.stfolder
 
+.devenv
+
 # C extensions
 *.so
 
