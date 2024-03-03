@@ -56,7 +56,7 @@ def plot_disease_dynamics(model, step, dpi):
     plt.yticks([])  # Hide y-axis ticks
 
     # Save the figure
-    plt.savefig(f'{output_dir}/vaccinated/image_vaccine_{step:03d}.png', dpi=dpi, bbox_inches='tight')
+    plt.savefig(f'{output_dir}/vaccinated/image_vaccinated_{model.alpha}_{step:03d}.png', dpi=dpi, bbox_inches='tight')
     plt.close() 
     # recovered 
     plt.figure(figsize=(10, 10))
@@ -84,7 +84,7 @@ def plot_disease_dynamics(model, step, dpi):
     plt.xticks([])  # Hide x-axis ticks
     plt.yticks([])
 
-    plt.savefig(f'{output_dir}/recovered/image_recovered_{step:03d}.png', dpi=dpi, bbox_inches='tight')
+    plt.savefig(f'{output_dir}/recovered/image_recovered_{model.alpha}_{step:03d}.png', dpi=dpi, bbox_inches='tight')
     plt.close()
 
 

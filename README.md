@@ -32,6 +32,7 @@ This repository features a simulation framework for modeling disease spread util
 git clone git@github.com:mushrafi88/Game-Theoretic-Disease-Spread-Simulation.git
 cd Game-Theoretic-Disease-Spread-Simulation
 nix develop --impure
+devenv up
 ```
 
 ### Running the Simulation

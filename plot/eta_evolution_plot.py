@@ -13,7 +13,7 @@ def plot_eta_evolution(model, step, dpi=700):
     - dpi: Dots per inch for the output image.
     """
     # Ensure the output directory exists
-    output_dir = 'results/eta_evolution_images'
+    output_dir = 'results/agent_dynamics_images/eta_evolution'
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -38,6 +38,6 @@ def plot_eta_evolution(model, step, dpi=700):
     plt.yticks([])
 
     # Save the plot
-    plt.savefig(f'{output_dir}/alpha_{model.alpha}_image_{step:03d}.png', dpi=dpi, bbox_inches='tight')
+    plt.savefig(f'{output_dir}/image_eta_evolution_{model.alpha}_{step:03d}.png', dpi=dpi, bbox_inches='tight')
     plt.close()  # Close the figure to free memory
 

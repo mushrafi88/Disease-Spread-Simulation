@@ -3,6 +3,7 @@ from model.disease_model import Disease_Model
 from plot.disease_dynamics_plot import plot_disease_dynamics
 from plot.eta_evolution_plot import plot_eta_evolution
 from plot.plot_line_graph import plot_line_graph
+from plot.recovered_to_infected_ratio_plot import generate_ratio_plots
 from tqdm import tqdm
 import os
 
@@ -27,8 +28,9 @@ def main():
     # Optionally: Collect and analyze data
     model_data = model.datacollector.get_model_vars_dataframe()
                     # Save the data to a CSV file
-    model_data.to_csv(f'results/line_graph_data_alpha_{model.alpha}.csv', index=False)
-    plot_line_graph(f'results/line_graph_data_alpha_{model.alpha}.csv', dpi = 100)
+    model_data.to_csv(f'results/line_graph_data/line_graph_data_alpha_{model.alpha}.csv', index=False)
+    plot_line_graph(f'results/line_graph_data/line_graph_data_alpha_{model.alpha}.csv', dpi = 100)
+    generate_ratio_plots(alpha = model.alpha, file_path=f'results/line_graph_data/line_graph_data_alpha_{model.alpha}.csv', dpi = 100)
 if __name__ == "__main__":
     main()
 

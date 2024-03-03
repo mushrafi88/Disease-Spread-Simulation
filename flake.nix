@@ -34,26 +34,9 @@
                   packages = [
                    pkgs.stdenv.cc 
                    pkgs.gnumake
-                   pkgs.streamlit
+                   pkgs.glib 
+                   pkgs.glibc
                    pkgs.python311Packages.imageio
-                   pkgs.python311Packages.zipp
-                   pkgs.python311Packages.jsonschema
-                   pkgs.python311Packages.toolz
-                   pkgs.python311Packages.altair
-                   pkgs.python311Packages.blinker
-                   pkgs.python311Packages.cachetools
-                   pkgs.python311Packages.gitpython
-                   pkgs.python311Packages.protobuf
-                   pkgs.python311Packages.pyarrow
-                   pkgs.python311Packages.pydeck
-                   pkgs.python311Packages.tenacity
-                   pkgs.python311Packages.toml 
-                   pkgs.python311Packages.tzlocal
-                   pkgs.python311Packages.watchdog
-                   pkgs.python311Packages.validators
-                   pkgs.python311Packages.typing-extensions 
-                   pkgs.python311Packages.importlib-metadata
-                   pkgs.python311Packages.streamlit
                    pkgs.python311Packages.numpy 
                    pkgs.python311Packages.pandas 
                    pkgs.python311Packages.seaborn 
@@ -76,11 +59,12 @@
                       enable = true;
                       quiet = true;
                     };
-                  };
-
-                  enterShell = ''pip install mesa==1.2.1'';
-
-                  #processes.myapp.exec = "";
+                      };
+                  env.LD_LIBRARY_PATH = "${nixpkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib ]}:/run/opengl-driver/lib/:${nixpkgs.lib.makeLibraryPath [ pkgs.glib ]}";
+                  enterShell = ''
+                  pip install mesa==1.2.1 streamlit
+                  '';
+                  processes.myapp.exec = "streamlit run app_streamlit.py";
                 }
               ];
             };
