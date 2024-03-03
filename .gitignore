@@ -9,7 +9,7 @@ __pycache__/
 **/.stfolder
 
 .devenv
-
+results
 # C extensions
 *.so
 
