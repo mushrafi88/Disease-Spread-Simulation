@@ -10,8 +10,6 @@ This repository features a simulation framework for modeling disease spread util
 
 ![Alt text for the GIF](results/output.gif)
 
-
-
 ## Getting Started
 
 ### Prerequisites
@@ -21,7 +19,7 @@ This repository features a simulation framework for modeling disease spread util
 - mesa == 1.2.1 
 - networkx
 - seaborn
-- NixPkgs
+- streamlit
 
 ### Installation and Setup
 1. **Clone the Repository**
@@ -34,9 +32,11 @@ cd Game-Theoretic-Disease-Spread-Simulation
 nix develop --impure
 devenv up
 ```
+for more instructions on how to setup devenv with nix follow this (https://devenv.sh/getting-started)
 
 ### Running the Simulation
 - **Line Graphs and Simulations**: Run `python main.py` to initiate simulations and generate line graphs.
+- **Web Interface**: Run `streamlit run app_streamlit.py`
 - **Heatmaps**: Use `python heatmap.py` for heatmap visualizations.
 
 ### Customization
