@@ -65,7 +65,7 @@ with st.form(key='parameters_form'):
         elif isinstance(value, int):
             params[param] = st.number_input(f"{param}", value=value, format="%d")
         elif isinstance(value, float):
-            params[param] = st.number_input(f"{param}", value=value)
+            params[param] = st.number_input(f"{param}", value=value, step=0.001, format="%.3f")
         elif isinstance(value, (list, dict)):  # Example for handling complex types, adjust as needed
             # For complex types, you might want to use text_area and parse the input as JSON
             raw_json = st.text_area(f"{param}", value=json.dumps(value))

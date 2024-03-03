@@ -18,7 +18,7 @@ def plot_eta_evolution(model, step, dpi=700):
         os.makedirs(output_dir)
 
     # Initialize the eta grid
-    eta_grid = np.full((model.grid.width, model.grid.height), np.nan)  # Use np.nan for cells without agents
+    eta_grid = np.full((model.grid.width, model.grid.height), 0.2)  # Use 0.2 for cells without agents
 
     # Populate the grid with eta values
     for agent in model.schedule.agents:
