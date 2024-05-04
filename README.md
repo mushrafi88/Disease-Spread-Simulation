@@ -1,7 +1,7 @@
-# Game-Theoretic-Disease-Spread-Simulation
+# Disease-Spread-Simulation
 
 ## Overview
-This repository features a simulation framework for modeling disease spread utilizing game theory to understand decision-making processes in infectious disease transmission. 
+This repository features a simulation framework for modeling disease spread in infectious disease transmission. 
 
 ## Features
 - **Disease Spread Simulation**: Leveraging game theory for nuanced behavioral modeling.
